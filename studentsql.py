@@ -33,7 +33,6 @@ class StudentDatabase(sqlite3.Connection):
         return self.cursor.fetchall()
 
     def add_student(self, student_info):
-
         self.cursor.execute('''INSERT OR IGNORE INTO database
          VALUES( 
         :student_id,
@@ -51,7 +50,7 @@ class StudentDatabase(sqlite3.Connection):
         :biology,
         :business,
          :maths,
-        :add_math)''',student_info)
+        :add_math)''', student_info)
 
         self.commit()
 
@@ -61,6 +60,15 @@ class StudentDatabase(sqlite3.Connection):
         return self.cursor.fetchall()
 
     def get_student_data(self, student_id):
-        print(student_id)
         self.cursor.execute("SELECT * FROM database WHERE StudentID = :student_id", {'student_id': student_id})
         return self.cursor.fetchone()
+
+    def remove_student(self, student_id):
+        self.cursor.execute("DELETE FROM  database WHERE StudentID = :student_id", {'student_id': student_id})
+        self.commit()
+
+    def update_student(self, student_id, column_name, updated_value):
+        self.cursor.execute(f"UPDATE database SET {column_name}= :updated_value WHERE StudentID = :student_id",
+                            {'student_id': student_id,
+                             'updated_value':updated_value})
+        self.commit()

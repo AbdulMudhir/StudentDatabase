@@ -80,16 +80,16 @@ class Ui_MainWindow(object):
                                         "padding: 0px;")
         self.find_student.setObjectName("find_student")
         self.horizontalLayout.addWidget(self.find_student)
-        self.update_students = QtWidgets.QPushButton(self.buttom_frame)
-        self.update_students.setMinimumSize(QtCore.QSize(0, 25))
-        self.update_students.setStyleSheet("background-color: white;\n"
+        self.remove_students = QtWidgets.QPushButton(self.buttom_frame)
+        self.remove_students.setMinimumSize(QtCore.QSize(0, 25))
+        self.remove_students.setStyleSheet("background-color: white;\n"
                                            "border-style: outset;\n"
                                            "border-width: 2px;\n"
                                            "border-radius: 5px;\n"
                                            "border-color: black;\n"
                                            "padding: 0px;")
-        self.update_students.setObjectName("update_students")
-        self.horizontalLayout.addWidget(self.update_students)
+        self.remove_students.setObjectName("remove_students")
+        self.horizontalLayout.addWidget(self.remove_students)
         self.table_widgets_frame = QtWidgets.QFrame(self.frame)
         self.table_widgets_frame.setGeometry(QtCore.QRect(10, 360, 511, 191))
         self.table_widgets_frame.setStyleSheet("background-color: orange;\n"
@@ -404,7 +404,7 @@ class Ui_MainWindow(object):
         self.print_button.setText(_translate("MainWindow", "Print Student Info"))
         self.add_student.setText(_translate("MainWindow", "Add Student"))
         self.find_student.setText(_translate("MainWindow", "Find Student"))
-        self.update_students.setText(_translate("MainWindow", "Update Student"))
+        self.remove_students.setText(_translate("MainWindow", "Remove Student"))
         self.student_id_label.setText(_translate("MainWindow", "Student ID"))
         self.firstname_label.setText(_translate("MainWindow", "Firstname"))
         self.surname_label.setText(_translate("MainWindow", "Surname"))
@@ -427,12 +427,13 @@ class Ui_MainWindow(object):
     def setup_table(self):
         database = self.student_database.get_columns()
 
-        column_names = []
+        self.column_names = []
+
         for column_number, column_name, *_ in database:
             self.table_view.insertColumn(column_number)
-            column_names.append(column_name)
+            self.column_names.append(column_name)
 
-        self.table_view.setHorizontalHeaderLabels(column_names)
+        self.table_view.setHorizontalHeaderLabels(self.column_names)
 
         database = self.student_database.get_database()
 
@@ -448,6 +449,9 @@ class Ui_MainWindow(object):
 
     def configure_buttons(self):
         self.add_student.clicked.connect(self.add_student_to_data_base)
+        self.table_view.cellChanged.connect(self.onCellChange)
+        self.table_view.currentItemChanged.connect(self.on_item_change)
+        self.remove_students.clicked.connect(self.remove_student)
 
     def add_student_to_data_base(self):
 
@@ -487,15 +491,39 @@ class Ui_MainWindow(object):
                 # place the info on the table
                 self.table_view.setItem(new_row, column, info_item)
 
+    def onCellChange(self, row, column):
 
-def update_table(self):
-    database = self.student_database.get_database()
+        updated_value = self.table_view.item(row, column).text()
+        student_id = self.table_view.item(row, 0).text()
+        column_name = self.column_names[column]
 
-    for row, student_info in enumerate(database, start=1):
-        for info in student_info:
-            info = QtWidgets.QTableWidgetItem([info])
-            self.table_view.setItem(row, 0, info)
+        self.student_database.update_student(student_id, column_name, updated_value)
 
+    def remove_student(self):
+        user_selected = self.table_view.selectedItems()
+
+        if user_selected:
+            if len(user_selected) > 1:
+
+                for user in user_selected:
+                    user_selected_row = user.row()
+
+
+            else:
+                user_selected_row = user_selected[0].row()
+                # get the user id column for the selected user
+                user_selected_id = self.table_view.item(user_selected_row, 0).text()
+
+                self.student_database.remove_student(user_selected_id)
+                # remove the information from that row
+                self.table_view.removeRow(user_selected_row)
+                # loop through each columns and remove the values of the users for that row
+
+
+
+
+    def on_item_change(self, current, previous):
+        pass
         # student_id = student_info[0]
         # student_f_name = student_info[1]
         # student_l_name = student_info[2]
