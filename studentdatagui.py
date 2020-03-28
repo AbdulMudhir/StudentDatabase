@@ -8,8 +8,10 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 from studentsql import StudentDatabase
+from PyQt5.QtSql import QSqlTableModel
 
 
 class Ui_MainWindow(object):
@@ -434,7 +436,6 @@ class Ui_MainWindow(object):
 
         database = self.student_database.get_database()
 
-
         # loop through the users in the database
         for row, student_info in enumerate(database):
             self.table_view.insertRow(row)
@@ -445,14 +446,15 @@ class Ui_MainWindow(object):
                 # place the info on the table
                 self.table_view.setItem(row, column, info_item)
 
-
-
     def configure_buttons(self):
         self.add_student.clicked.connect(self.add_student_to_data_base)
 
     def add_student_to_data_base(self):
 
-        if len(self.student_id_input.text()) != 0:
+        # check if the user is already in the to prevent updating the QTable
+        student_checker = self.student_database.get_student_data(self.student_id_input.text())
+
+        if len(self.student_id_input.text()) != 0 and student_checker is None:
 
             student_info = {'student_id': self.student_id_input.text(),
                             'first_name': self.firstname_input.text(),
@@ -475,17 +477,15 @@ class Ui_MainWindow(object):
 
             self.student_database.add_student(student_info)
 
-            new_row = self.table_view.rowCount()+1
+            new_row = self.table_view.rowCount()
             create_row = self.table_view.insertRow(new_row)
 
             # loop through each user for the columns
-            for column, info in enumerate(student_info):
+            for column, info in enumerate(student_info.values()):
                 # convert the info into a widget item to place on table
                 info_item = QtWidgets.QTableWidgetItem(info)
                 # place the info on the table
                 self.table_view.setItem(new_row, column, info_item)
-
-
 
 
 def update_table(self):

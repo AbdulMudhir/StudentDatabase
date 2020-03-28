@@ -59,3 +59,8 @@ class StudentDatabase(sqlite3.Connection):
         self.cursor.execute("SELECT * FROM database")
 
         return self.cursor.fetchall()
+
+    def get_student_data(self, student_id):
+        print(student_id)
+        self.cursor.execute("SELECT * FROM database WHERE StudentID = :student_id", {'student_id': student_id})
+        return self.cursor.fetchone()
