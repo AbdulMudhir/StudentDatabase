@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>554</width>
-    <height>627</height>
+    <width>644</width>
+    <height>693</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -38,626 +38,670 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QLabel" name="student_database_management_system">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>0</y>
-         <width>381</width>
-         <height>51</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Student Database Management System</string>
-       </property>
-      </widget>
-      <widget class="QFrame" name="buttom_frame">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>560</y>
-         <width>511</width>
-         <height>41</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background:orange</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QPushButton" name="print_button">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>25</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: white;
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="student_database_management_system">
+         <property name="font">
+          <font>
+           <pointsize>20</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color:orange;
 border-style: outset;
-border-width: 2px;
+border-width: 1px;
 border-radius: 5px;
 border-color: black;
-padding: 0px;</string>
-          </property>
-          <property name="text">
-           <string>Print Student Info</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="add_student">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>25</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: white;
+padding: 4px;</string>
+         </property>
+         <property name="text">
+          <string>Student Database Management</string>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QFrame" name="database_input_frames">
+         <property name="styleSheet">
+          <string notr="true">background-color:orange;
 border-style: outset;
-border-width: 2px;
+border-width: 1px;
 border-radius: 5px;
 border-color: black;
-padding: 0px;</string>
-          </property>
-          <property name="text">
-           <string>Add Student</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="find_student">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>25</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: white;
+padding: 4px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QFrame" name="student_info_frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color:orange;
 border-style: outset;
-border-width: 2px;
+border-width: 1px;
 border-radius: 5px;
 border-color: black;
-padding: 0px;</string>
-          </property>
-          <property name="text">
-           <string>Find Student</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="update_students">
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>25</height>
-           </size>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: white;
+padding: 4px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_7">
+             <item row="0" column="0">
+              <widget class="QLabel" name="student_id_label">
+               <property name="text">
+                <string>Student ID</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="student_id_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
 border-style: outset;
-border-width: 2px;
-border-radius: 5px;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="firstname_label">
+               <property name="text">
+                <string>Firstname</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="firstname_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="surname_label">
+               <property name="text">
+                <string>Surname</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="surname_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="gender_label">
+               <property name="text">
+                <string>Gender</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="gender_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="age_label">
+               <property name="text">
+                <string>Age</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="age__input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="address_label">
+               <property name="text">
+                <string>Address</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLineEdit" name="address_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="postcode_label">
+               <property name="text">
+                <string>Postcode</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLineEdit" name="postcode_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="mobile_label">
+               <property name="text">
+                <string>Mobile</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QLineEdit" name="mobile_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QFrame" name="subjects_frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background:orange</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QFormLayout" name="formLayout_3">
+             <item row="0" column="0">
+              <widget class="QLabel" name="subject_label">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-style: outset;
+border-radius: 0px;
+border-width: 0px;
 border-color: black;
 padding: 0px;</string>
-          </property>
-          <property name="text">
-           <string>Update Student</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QFrame" name="table_widgets_frame">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>360</y>
-         <width>511</width>
-         <height>191</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: orange;
+               </property>
+               <property name="text">
+                <string>Subjects</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="score_label">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                 <underline>false</underline>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border-style: outset;
+border-radius: 0px;
+border-width: 0px;
+border-color: black;
+padding: 0px;</string>
+               </property>
+               <property name="text">
+                <string>Score</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="chemistry_label">
+               <property name="text">
+                <string>Chemistry</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="chemistry_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="computing_label">
+               <property name="text">
+                <string>Computing</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="computing_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="english_label">
+               <property name="text">
+                <string>English</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="english_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="physics_label">
+               <property name="text">
+                <string>Physics</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="physics_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QLabel" name="biology_label">
+               <property name="text">
+                <string>Biology</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="1">
+              <widget class="QLineEdit" name="biology_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="business_label">
+               <property name="text">
+                <string>Business</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QLineEdit" name="business_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="math_label">
+               <property name="text">
+                <string>Maths</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QLineEdit" name="math_input">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="math_label_2">
+               <property name="text">
+                <string>Additional Maths</string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <widget class="QLineEdit" name="math_input_2">
+               <property name="styleSheet">
+                <string notr="true">background:white;
+border-style: outset;
+border-width: 1px;
+border-radius: 0px;
+border-color: black;
+padding: 1px;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QFrame" name="table_widgets_frame">
+         <property name="styleSheet">
+          <string notr="true">background-color: orange;
 border-style: outset;
 border-width: 1px;
 border-radius: 3px;
 border-color: black;
 padding: 0px;</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
-         <widget class="QScrollArea" name="scrollArea">
-          <property name="styleSheet">
-           <string notr="true">background-color: orange;
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="styleSheet">
+             <string notr="true">background-color: orange;
 border-style: outset;
 border-width: 0px;
 border-radius: 0px;
 border-color: black;
 padding: 0px;</string>
-          </property>
-          <property name="widgetResizable">
-           <bool>true</bool>
-          </property>
-          <widget class="QWidget" name="scrollAreaWidgetContents">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>491</width>
-             <height>171</height>
-            </rect>
-           </property>
-           <layout class="QGridLayout" name="gridLayout_4">
-            <item row="0" column="0">
-             <widget class="QTableWidget" name="table_view">
-              <property name="styleSheet">
-               <string notr="true">background-color:white;
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>586</width>
+               <height>204</height>
+              </rect>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <widget class="QTableWidget" name="tableWidget">
+                <property name="styleSheet">
+                 <string notr="true">background:white</string>
+                </property>
+                <property name="sizeAdjustPolicy">
+                 <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+                </property>
+                <property name="rowCount">
+                 <number>0</number>
+                </property>
+                <property name="columnCount">
+                 <number>0</number>
+                </property>
+                <attribute name="verticalHeaderCascadingSectionResizes">
+                 <bool>false</bool>
+                </attribute>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QFrame" name="buttom_frame">
+         <property name="styleSheet">
+          <string notr="true">background:orange</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="print_button">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;
 border-style: outset;
-border-width: 1px;
+border-width: 2px;
 border-radius: 5px;
 border-color: black;
 padding: 0px;</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QFrame" name="database_input_frames">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>50</y>
-         <width>511</width>
-         <height>301</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 174, 10);
+            </property>
+            <property name="text">
+             <string>Print Student Info</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Human-gnome-dev-printer-new.svg.png</normaloff>Human-gnome-dev-printer-new.svg.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="add_student">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;
 border-style: outset;
-border-width: 1px;
-border-radius: 15px;
-border-color: black;
-padding: 4px;</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QFrame" name="student_info_frame">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background:orange</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QFormLayout" name="formLayout_2">
-           <item row="0" column="0">
-            <widget class="QLabel" name="student_id_label">
-             <property name="text">
-              <string>Student ID</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLineEdit" name="student_id_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="firstname_label">
-             <property name="text">
-              <string>Firstname</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="firstname_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="surname_label">
-             <property name="text">
-              <string>Surname</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLineEdit" name="surname_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="gender_label">
-             <property name="text">
-              <string>Gender</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QLineEdit" name="gender_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="age_label">
-             <property name="text">
-              <string>Age</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QLineEdit" name="age__input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="address_label">
-             <property name="text">
-              <string>Address</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QLineEdit" name="address_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="postcode_label">
-             <property name="text">
-              <string>Postcode</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QLineEdit" name="postcode_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="mobile_label">
-             <property name="text">
-              <string>Mobile</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QLineEdit" name="mobile_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Fixed</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QFrame" name="subjects_frame">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background:orange</string>
-          </property>
-          <property name="frameShape">
-           <enum>QFrame::StyledPanel</enum>
-          </property>
-          <property name="frameShadow">
-           <enum>QFrame::Raised</enum>
-          </property>
-          <layout class="QFormLayout" name="formLayout_3">
-           <item row="0" column="0">
-            <widget class="QLabel" name="subject_label">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-style: outset;
-border-radius: 0px;
-border-width: 0px;
+border-width: 2px;
+border-radius: 5px;
 border-color: black;
 padding: 0px;</string>
-             </property>
-             <property name="text">
-              <string>Subjects</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLabel" name="score_label">
-             <property name="font">
-              <font>
-               <weight>75</weight>
-               <bold>true</bold>
-               <underline>false</underline>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border-style: outset;
-border-radius: 0px;
-border-width: 0px;
+            </property>
+            <property name="text">
+             <string>Add Student</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>Education,_Studying,_University,_Alumni_-_icon.png</normaloff>Education,_Studying,_University,_Alumni_-_icon.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="find_student">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;
+border-style: outset;
+border-width: 2px;
+border-radius: 5px;
 border-color: black;
 padding: 0px;</string>
-             </property>
-             <property name="text">
-              <string>Score</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
-            <widget class="QLabel" name="chemistry_label">
-             <property name="text">
-              <string>Chemistry</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="chemistry_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
+            </property>
+            <property name="text">
+             <string>Find Student</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>1046px-Magnifying_glass_icon_mgx2.svg.png</normaloff>1046px-Magnifying_glass_icon_mgx2.svg.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>50</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QPushButton" name="remove_student">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: white;
 border-style: outset;
-border-width: 1px;
-border-radius: 0px;
+border-width: 2px;
+border-radius: 5px;
 border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="computing_label">
-             <property name="text">
-              <string>Computing</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="1">
-            <widget class="QLineEdit" name="computing_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="english_label">
-             <property name="text">
-              <string>English</string>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="1">
-            <widget class="QLineEdit" name="english_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="physics_label">
-             <property name="text">
-              <string>Physics</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QLineEdit" name="physics_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
-            <widget class="QLabel" name="biology_label">
-             <property name="text">
-              <string>Biology</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QLineEdit" name="biology_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0">
-            <widget class="QLabel" name="business_label">
-             <property name="text">
-              <string>Business</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QLineEdit" name="business_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="0">
-            <widget class="QLabel" name="math_label">
-             <property name="text">
-              <string>Maths</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1">
-            <widget class="QLineEdit" name="math_input">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="0">
-            <widget class="QLabel" name="math_label_2">
-             <property name="text">
-              <string>Additional Maths</string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="1">
-            <widget class="QLineEdit" name="math_input_2">
-             <property name="styleSheet">
-              <string notr="true">background:white;
-border-style: outset;
-border-width: 1px;
-border-radius: 0px;
-border-color: black;
-padding: 1px;</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </item>
-       </layout>
-      </widget>
+padding: 0px;</string>
+            </property>
+            <property name="text">
+             <string>Remove Student</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>garbage-2091534_960_720.png</normaloff>garbage-2091534_960_720.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>45</width>
+              <height>50</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </item>
    </layout>

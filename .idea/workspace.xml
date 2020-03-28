@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="17cd57f3-a8b1-467e-8249-fe36f7b7ba74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/testDataset/fill_dataset.py" afterDir="false" />
+    <list default="true" id="17cd57f3-a8b1-467e-8249-fe36f7b7ba74" name="Default Changelist" comment="test dataset">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studentdatagui.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentdatagui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studentsql.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentsql.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/studentdatabasement.ui" beforeDir="false" afterPath="$PROJECT_DIR$/studentdatabasement.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/studentGUI.py" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1ZlDLBvwHKaXi9LfgLo7PPDZxqS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -33,8 +34,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager" selected="Python.studentdatagui">
+  <component name="RunManager" selected="Python.studentGUI">
     <configuration name="fill_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="StudentDatabase" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -48,6 +50,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testDataset/fill_dataset.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="studentGUI" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="StudentDatabase" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/studentGUI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -102,9 +125,11 @@
       <item itemvalue="Python.studentdatagui" />
       <item itemvalue="Python.studentsql" />
       <item itemvalue="Python.fill_dataset" />
+      <item itemvalue="Python.studentGUI" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.studentGUI" />
         <item itemvalue="Python.studentdatagui" />
         <item itemvalue="Python.fill_dataset" />
         <item itemvalue="Python.studentsql" />
@@ -162,14 +187,22 @@
       <option name="project" value="LOCAL" />
       <updated>1585420089361</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test dataset">
+      <created>1585425390727</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585425390727</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created database" />
     <MESSAGE value="adding students" />
     <MESSAGE value="removing students" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing students" />
+    <MESSAGE value="test dataset" />
+    <option name="LAST_COMMIT_MESSAGE" value="test dataset" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="356" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585409092725">
@@ -180,30 +213,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="448" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585407453960" />
-    <state x="934" y="295" key="CommitChangelistDialog2" timestamp="1585420088756">
+    <state x="934" y="295" key="CommitChangelistDialog2" timestamp="1585426810299">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="934" y="295" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585420088756" />
-    <state width="2539" height="401" key="GridCell.Tab.0.bottom" timestamp="1585425349544">
+    <state x="934" y="295" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585426810299" />
+    <state width="2539" height="401" key="GridCell.Tab.0.bottom" timestamp="1585427735749">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2539" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585425349544" />
-    <state width="2539" height="401" key="GridCell.Tab.0.center" timestamp="1585425349544">
+    <state width="2539" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585427735749" />
+    <state width="2539" height="401" key="GridCell.Tab.0.center" timestamp="1585427735749">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2539" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585425349544" />
-    <state width="2539" height="401" key="GridCell.Tab.0.left" timestamp="1585425349544">
+    <state width="2539" height="401" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585427735749" />
+    <state width="2539" height="401" key="GridCell.Tab.0.left" timestamp="1585427735749">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2539" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585425349544" />
-    <state width="2539" height="401" key="GridCell.Tab.0.right" timestamp="1585425349544">
+    <state width="2539" height="401" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585427735749" />
+    <state width="2539" height="401" key="GridCell.Tab.0.right" timestamp="1585427735749">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2539" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585425349544" />
-    <state x="872" y="434" key="Vcs.Push.Dialog.v2" timestamp="1585420090690">
+    <state width="2539" height="401" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585427735749" />
+    <state x="872" y="434" key="Vcs.Push.Dialog.v2" timestamp="1585425393767">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585420090690" />
+    <state x="872" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585425393767" />
     <state x="2568" y="-25" width="1456" height="723" maximized="true" key="dock-window-1" timestamp="1585416070401">
       <screen x="2560" y="0" width="1440" height="860" />
     </state>
