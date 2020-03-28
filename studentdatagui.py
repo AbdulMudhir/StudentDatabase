@@ -13,6 +13,9 @@ from studentsql import StudentDatabase
 
 
 class Ui_MainWindow(object):
+    def __init__(self):
+        self.student_database = StudentDatabase("student_database.db")
+
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setFixedSize(554, 627)
@@ -390,6 +393,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         self.setup_table()
+        self.configure_buttons()
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -419,25 +423,95 @@ class Ui_MainWindow(object):
         self.math_label_2.setText(_translate("MainWindow", "Additional Maths"))
 
     def setup_table(self):
-        item1 = QtWidgets.QTableWidgetItem("test")
-        student_database = StudentDatabase("student_database.db")
-        student_database.set_database()
-        database = student_database.get_columns()
+        database = self.student_database.get_columns()
 
         column_names = []
         for column_number, column_name, *_ in database:
             self.table_view.insertColumn(column_number)
-            self.table_view.insertRow(column_number)
             column_names.append(column_name)
-
 
         self.table_view.setHorizontalHeaderLabels(column_names)
 
+        database = self.student_database.get_database()
+
+
+        # loop through the users in the database
+        for row, student_info in enumerate(database):
+            self.table_view.insertRow(row)
+            # loop through each user for the columns
+            for column, info in enumerate(student_info):
+                # convert the info into a widget item to place on table
+                info_item = QtWidgets.QTableWidgetItem(info)
+                # place the info on the table
+                self.table_view.setItem(row, column, info_item)
+
+
+
+    def configure_buttons(self):
+        self.add_student.clicked.connect(self.add_student_to_data_base)
+
+    def add_student_to_data_base(self):
+
+        if len(self.student_id_input.text()) != 0:
+
+            student_info = {'student_id': self.student_id_input.text(),
+                            'first_name': self.firstname_input.text(),
+                            'last_name': self.surname_input.text(),
+                            'gender': self.gender_input.text(),
+                            'age': self.age__input.text(),
+                            'address': self.address_input.text(),
+                            'postcode': self.postcode_input.text(),
+                            'mobile': self.mobile_input.text(),
+                            'chemistry': self.chemistry_input.text(),
+                            'computing': self.computing_input.text(),
+                            'english': self.english_input.text(),
+                            'physics': self.physics_input.text(),
+                            'biology': self.biology_input.text(),
+                            'business': self.business_input.text(),
+                            'maths': self.math_input.text(),
+                            'add_math': self.math_input_2.text(),
+
+                            }
+
+            self.student_database.add_student(student_info)
+
+            new_row = self.table_view.rowCount()+1
+            create_row = self.table_view.insertRow(new_row)
+
+            # loop through each user for the columns
+            for column, info in enumerate(student_info):
+                # convert the info into a widget item to place on table
+                info_item = QtWidgets.QTableWidgetItem(info)
+                # place the info on the table
+                self.table_view.setItem(new_row, column, info_item)
 
 
 
 
+def update_table(self):
+    database = self.student_database.get_database()
 
+    for row, student_info in enumerate(database, start=1):
+        for info in student_info:
+            info = QtWidgets.QTableWidgetItem([info])
+            self.table_view.setItem(row, 0, info)
+
+        # student_id = student_info[0]
+        # student_f_name = student_info[1]
+        # student_l_name = student_info[2]
+        # student_gender = student_info[3]
+        # student_age = student_info[4]
+        # student_address = student_info[5]
+        # student_postcode = student_info[6]
+        # student_mobile = student_info[7]
+        # student_chemistry = student_info[8]
+        # student_computing = student_info[9]
+        # student_english = student_info[10]
+        # student_physics = student_info[11]
+        # student_biology = student_info[12]
+        # student_business = student_info[13]
+        # student_maths = student_info[14]
+        # student_add_math = student_info[15]
 
 
 if __name__ == "__main__":
