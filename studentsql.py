@@ -52,7 +52,6 @@ class StudentDatabase(sqlite3.Connection):
          :maths,
         :add_math)''', student_info)
 
-        self.commit()
 
     def get_database(self):
         self.cursor.execute("SELECT * FROM database")

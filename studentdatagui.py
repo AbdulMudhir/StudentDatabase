@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 
+from threading import Thread
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery
@@ -438,14 +439,18 @@ class Ui_MainWindow(object):
         database = self.student_database.get_database()
 
         # loop through the users in the database
-        for row, student_info in enumerate(database):
+        for row, student_info in enumerate(database[0:1000]):
             self.table_view.insertRow(row)
             # loop through each user for the columns
             for column, info in enumerate(student_info):
                 # convert the info into a widget item to place on table
-                info_item = QtWidgets.QTableWidgetItem(info)
+                info_item = QtWidgets.QTableWidgetItem(str(info))
                 # place the info on the table
-                self.table_view.setItem(row, column, info_item)
+                self.display_student(row, column, info_item)
+
+
+    def display_student(self, row, column, info):
+        self.table_view.setItem(row, column, info)
 
     def configure_buttons(self):
         self.add_student.clicked.connect(self.add_student_to_data_base)
@@ -507,7 +512,9 @@ class Ui_MainWindow(object):
 
                 for user in user_selected:
                     user_selected_row = user.row()
-
+                    user_selected_id = self.table_view.item(user_selected_row, 0).text()
+                    self.student_database.remove_student(user_selected_id)
+                    self.table_view.removeRow(user_selected_row)
 
             else:
                 user_selected_row = user_selected[0].row()
@@ -518,9 +525,6 @@ class Ui_MainWindow(object):
                 # remove the information from that row
                 self.table_view.removeRow(user_selected_row)
                 # loop through each columns and remove the values of the users for that row
-
-
-
 
     def on_item_change(self, current, previous):
         pass
@@ -540,6 +544,7 @@ class Ui_MainWindow(object):
         # student_business = student_info[13]
         # student_maths = student_info[14]
         # student_add_math = student_info[15]
+
 
 
 if __name__ == "__main__":
