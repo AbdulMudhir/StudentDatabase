@@ -8,6 +8,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtSql import QSqlDatabase, QSqlQuery
+from studentsql import StudentDatabase
 
 
 class Ui_MainWindow(object):
@@ -418,7 +420,22 @@ class Ui_MainWindow(object):
 
     def setup_table(self):
         item1 = QtWidgets.QTableWidgetItem("test")
-        self.table_view.setItem(1,2, item1)
+        student_database = StudentDatabase("student_database.db")
+        student_database.set_database()
+        database = student_database.get_columns()
+
+        column_names = []
+        for column_number, column_name, *_ in database:
+            self.table_view.insertColumn(column_number)
+            self.table_view.insertRow(column_number)
+            column_names.append(column_name)
+
+
+        self.table_view.setHorizontalHeaderLabels(column_names)
+
+
+
+
 
 
 
