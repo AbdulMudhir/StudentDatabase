@@ -107,6 +107,14 @@ padding: 4px;</string>
             <layout class="QGridLayout" name="gridLayout_7">
              <item row="0" column="0">
               <widget class="QLabel" name="student_id_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Student ID</string>
                </property>
@@ -126,6 +134,14 @@ padding: 1px;</string>
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="firstname_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Firstname</string>
                </property>
@@ -145,6 +161,14 @@ padding: 1px;</string>
              </item>
              <item row="2" column="0">
               <widget class="QLabel" name="surname_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Surname</string>
                </property>
@@ -164,6 +188,14 @@ padding: 1px;</string>
              </item>
              <item row="3" column="0">
               <widget class="QLabel" name="gender_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Gender</string>
                </property>
@@ -183,6 +215,14 @@ padding: 1px;</string>
              </item>
              <item row="4" column="0">
               <widget class="QLabel" name="age_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Age</string>
                </property>
@@ -202,6 +242,14 @@ padding: 1px;</string>
              </item>
              <item row="5" column="0">
               <widget class="QLabel" name="address_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Address</string>
                </property>
@@ -221,6 +269,14 @@ padding: 1px;</string>
              </item>
              <item row="6" column="0">
               <widget class="QLabel" name="postcode_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Postcode</string>
                </property>
@@ -240,6 +296,14 @@ padding: 1px;</string>
              </item>
              <item row="7" column="0">
               <widget class="QLabel" name="mobile_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Mobile</string>
                </property>
@@ -295,54 +359,21 @@ padding: 1px;</string>
             </property>
             <layout class="QFormLayout" name="formLayout_3">
              <item row="0" column="0">
-              <widget class="QLabel" name="subject_label">
-               <property name="font">
-                <font>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border-style: outset;
-border-radius: 0px;
-border-width: 0px;
-border-color: black;
-padding: 0px;</string>
-               </property>
-               <property name="text">
-                <string>Subjects</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLabel" name="score_label">
-               <property name="font">
-                <font>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                 <underline>false</underline>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">border-style: outset;
-border-radius: 0px;
-border-width: 0px;
-border-color: black;
-padding: 0px;</string>
-               </property>
-               <property name="text">
-                <string>Score</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
               <widget class="QLabel" name="chemistry_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Chemistry</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="1">
+             <item row="0" column="1">
               <widget class="QLineEdit" name="chemistry_input">
                <property name="styleSheet">
                 <string notr="true">background:white;
@@ -354,14 +385,22 @@ padding: 1px;</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="0">
+             <item row="1" column="0">
               <widget class="QLabel" name="computing_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Computing</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
+             <item row="1" column="1">
               <widget class="QLineEdit" name="computing_input">
                <property name="styleSheet">
                 <string notr="true">background:white;
@@ -373,14 +412,22 @@ padding: 1px;</string>
                </property>
               </widget>
              </item>
-             <item row="3" column="0">
+             <item row="2" column="0">
               <widget class="QLabel" name="english_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>English</string>
                </property>
               </widget>
              </item>
-             <item row="3" column="1">
+             <item row="2" column="1">
               <widget class="QLineEdit" name="english_input">
                <property name="styleSheet">
                 <string notr="true">background:white;
@@ -392,14 +439,22 @@ padding: 1px;</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="0">
+             <item row="3" column="0">
               <widget class="QLabel" name="physics_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Physics</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="1">
+             <item row="3" column="1">
               <widget class="QLineEdit" name="physics_input">
                <property name="styleSheet">
                 <string notr="true">background:white;
@@ -411,14 +466,22 @@ padding: 1px;</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="0">
+             <item row="4" column="0">
               <widget class="QLabel" name="biology_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Biology</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="1">
+             <item row="4" column="1">
               <widget class="QLineEdit" name="biology_input">
                <property name="styleSheet">
                 <string notr="true">background:white;
@@ -430,14 +493,22 @@ padding: 1px;</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="0">
+             <item row="5" column="0">
               <widget class="QLabel" name="business_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Business</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="1">
+             <item row="5" column="1">
               <widget class="QLineEdit" name="business_input">
                <property name="styleSheet">
                 <string notr="true">background:white;
@@ -449,14 +520,22 @@ padding: 1px;</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="0">
+             <item row="6" column="0">
               <widget class="QLabel" name="math_label">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Maths</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="1">
+             <item row="6" column="1">
               <widget class="QLineEdit" name="math_input">
                <property name="styleSheet">
                 <string notr="true">background:white;
@@ -468,8 +547,16 @@ padding: 1px;</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="0">
+             <item row="7" column="0">
               <widget class="QLabel" name="math_label_2">
+               <property name="styleSheet">
+                <string notr="true">background-color:orange;
+border-style: outset;
+border-width: 0px;
+border-radius: 5px;
+border-color: black;
+padding: 4px;</string>
+               </property>
                <property name="text">
                 <string>Additional Maths</string>
                </property>
@@ -478,7 +565,7 @@ padding: 1px;</string>
                </property>
               </widget>
              </item>
-             <item row="8" column="1">
+             <item row="7" column="1">
               <widget class="QLineEdit" name="math_input_2">
                <property name="styleSheet">
                 <string notr="true">background:white;
@@ -532,7 +619,7 @@ padding: 0px;</string>
                <x>0</x>
                <y>0</y>
                <width>586</width>
-               <height>204</height>
+               <height>234</height>
               </rect>
              </property>
              <layout class="QGridLayout" name="gridLayout_4">
