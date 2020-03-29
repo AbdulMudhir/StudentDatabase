@@ -4,10 +4,10 @@ import sqlite3
 class StudentDatabase(sqlite3.Connection):
 
     def __init__(self, database_path):
-        sqlite3.Connection.__init__(self, database_path)
+        sqlite3.Connection.__init__(self, database_path, check_same_thread=False)
         self.cursor = self.cursor()
 
-    def set_database(self):
+    def create_database(self):
         self.cursor.execute('''CREATE TABLE database (
        StudentID TEXT UNIQUE,
        Firstname TEXT,
@@ -71,3 +71,8 @@ class StudentDatabase(sqlite3.Connection):
                             {'student_id': student_id,
                              'updated_value':updated_value})
         self.commit()
+
+    def filter_student_by_id(self, student_id):
+        self.cursor.execute(f"SELECT * FROM database WHERE StudentID LIKE '%{student_id}%';")
+
+        return self.cursor.fetchall()
