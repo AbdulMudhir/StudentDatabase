@@ -569,19 +569,27 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
     def configure_buttons(self):
         self.add_student.clicked.connect(self.add_student_to_data_base)
-        self.tableWidget.cellChanged.connect(self.onCellChange)
+        self.tableWidget.cellChanged.connect(self.on_cell_change)
         self.tableWidget.currentItemChanged.connect(self.on_item_change)
         self.remove_student.clicked.connect(self.remove_a_student)
         self.find_student.clicked.connect(self.find_a_student)
         self.student_id_input.textChanged.connect(self.find_a_student)
         self.tableWidget.cellClicked.connect(self.cell_clicked)
+        self.tableWidget.cellDoubleClicked.connect(self.on_cell_entered)
 
 
 
     def cell_clicked(self, row,column):
-        print(column)
+        pass
 
 
+    def on_cell_entered(self,row, column):
+
+        if column == 0:
+            # clear the list of the student that was changed
+            self.previous_student_id.clear()
+
+            self.previous_student_id.append(self.tableWidget.item(row, column).text())
 
 
 
@@ -648,13 +656,49 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.math_input.clear()
         self.math_input_2.clear()
 
-    def onCellChange(self, row, column):
+    def on_cell_change(self, row, column):
 
         updated_value = self.tableWidget.item(row, column).text()
-        student_id = self.tableWidget.item(row, 0).text()
         column_name = self.column_names[column]
 
-        self.student_database.update_student(student_id, column_name, updated_value)
+        # will be used to update the student id on the SQL
+        if column == 0:
+
+            try:# get the previous student enterd
+                previous_student_id = self.previous_student_id[0]
+
+                check_user_id_exist = self.student_database.get_student_data(updated_value)
+
+
+                # if the user id does not exist
+                if check_user_id_exist is None:
+
+
+                    # update the student's ID
+                    self.student_database.update_student(previous_student_id, column_name, updated_value)
+
+                    # clear th e previous student id as it's now changed
+                    self.previous_student_id.clear()
+
+                    # add the new student id to previous name in case they want to change it
+                    self.previous_student_id.append(updated_value)
+
+                else:
+                    print(previous_student_id)
+                    pop_up_message = QMessageBox.about(self, "Information", " User ID has already been used!, Please choose a different it")
+            except IndexError:
+                pass
+
+
+
+
+
+
+
+        else:
+            student_id = self.tableWidget.item(row, 0).text()
+
+            self.student_database.update_student(student_id, column_name, updated_value)
 
 
     def find_a_student(self):
