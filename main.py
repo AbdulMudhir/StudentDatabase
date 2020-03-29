@@ -11,8 +11,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, QThread
 from PyQt5.QtWidgets import QMessageBox
 from studentsql import StudentDatabase
-from database_thread import StudentFinderThread
-from threading import Thread
 
 
 class Ui_MainWindow(QtWidgets.QMainWindow):
@@ -707,10 +705,13 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
 
         student_id_column = 0
 
+
         for row in range(self.tableWidget.rowCount()):
+
             student_id_checks = self.tableWidget.item(row, student_id_column)
 
             if student_id_checks.text().startswith(student_id):
+
                 self.tableWidget.setRowHidden(row, False)
 
             else:
