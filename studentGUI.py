@@ -704,21 +704,40 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
     def find_a_student(self):
         student_id = self.student_id_input.text()
 
-        find_item = self.tableWidget.findItems(student_id, Qt.MatchExactly)
 
-        if find_item:
-            self.tableWidget.clearSelection()
+        student_id_column = 0
+
+        for row in range(self.tableWidget.rowCount()):
+            student_id_checks = self.tableWidget.item(row, student_id_column)
+
+            if student_id_checks.text().startswith(student_id):
+                self.tableWidget.setRowHidden(row, False)
+
+            else:
+                self.tableWidget.setRowHidden(row, True)
 
 
-
-            selected_cell = find_item[0]
-
-            # scroll to that item in the list
-            self.tableWidget.scrollToItem(selected_cell)
-
-            #selected_cell.setBackground(QtGui.QColor(255,128,128))
-            selected_cell.setSelected(True)
-
+        # if len(student_id) > 0 :
+        #
+        #     find_item = self.tableWidget.findItems(student_id, Qt.MatchExactly)
+        #
+        #     # if match is not empty continue
+        #     print(find_item)
+        #     if find_item:
+        #
+        #         self.tableWidget.clearSelection()
+        #
+        #
+        #
+        #         selected_cell = find_item[0]
+        #
+        #         # scroll to that item in the list
+        #         self.tableWidget.scrollToItem(selected_cell)
+        #
+        #         #selected_cell.setBackground(QtGui.QColor(255,128,128))
+        #         selected_cell.setSelected(True)
+        #
+        # print(student_id)
 
 
 
