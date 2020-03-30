@@ -9,6 +9,7 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, QThread
+from PyQt5.QtPrintSupport import QPrintDialog, QPrinter
 from PyQt5.QtWidgets import QMessageBox
 from studentsql import StudentDatabase
 
@@ -574,7 +575,16 @@ class Ui_MainWindow(QtWidgets.QMainWindow):
         self.student_id_input.textChanged.connect(self.find_a_student)
         self.tableWidget.cellClicked.connect(self.cell_clicked)
         self.tableWidget.cellDoubleClicked.connect(self.on_cell_entered)
+        self.print_button.clicked.connect(self.printer_selection)
 
+
+    def printer_selection(self):
+
+        printer = QPrinter(QPrinter.HighResolution)
+        printer_dialog = QPrintDialog(printer, self)
+
+        if printer_dialog.exec() == QPrintDialog.Accepted:
+            pass
 
 
     def cell_clicked(self, row,column):

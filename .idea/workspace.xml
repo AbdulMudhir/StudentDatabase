@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="17cd57f3-a8b1-467e-8249-fe36f7b7ba74" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database_thread.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/studentGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/studentGUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +21,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/studentGUI.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/main.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1ZlDLBvwHKaXi9LfgLo7PPDZxqS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,7 +36,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
-  <component name="RunManager" selected="Python.studentGUI">
+  <component name="RunManager" selected="Python.main">
     <configuration name="fill_dataset" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="StudentDatabase" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -51,6 +50,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testDataset/fill_dataset.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="StudentDatabase" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,27 +121,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="studentdatagui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="StudentDatabase" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/studentdatagui.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="studentsql" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="StudentDatabase" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,19 +143,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.studentdatagui" />
       <item itemvalue="Python.studentsql" />
       <item itemvalue="Python.fill_dataset" />
       <item itemvalue="Python.studentGUI" />
       <item itemvalue="Python.studentGUI2" />
+      <item itemvalue="Python.main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.studentGUI" />
         <item itemvalue="Python.fill_dataset" />
         <item itemvalue="Python.studentsql" />
         <item itemvalue="Python.studentGUI2" />
-        <item itemvalue="Python.studentdatagui" />
       </list>
     </recent_temporary>
   </component>
@@ -260,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585503245902</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="search filter">
+      <created>1585504890446</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585504890446</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -285,30 +291,30 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="448" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585504842850" />
-    <state x="934" y="295" key="CommitChangelistDialog2" timestamp="1585503245305">
+    <state x="934" y="295" key="CommitChangelistDialog2" timestamp="1585504889679">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="934" y="295" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585503245305" />
-    <state width="2539" height="259" key="GridCell.Tab.0.bottom" timestamp="1585504830404">
+    <state x="934" y="295" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585504889679" />
+    <state width="2539" height="259" key="GridCell.Tab.0.bottom" timestamp="1585505104948">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2539" height="259" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585504830404" />
-    <state width="2539" height="259" key="GridCell.Tab.0.center" timestamp="1585504830404">
+    <state width="2539" height="259" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585505104948" />
+    <state width="2539" height="259" key="GridCell.Tab.0.center" timestamp="1585505104947">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2539" height="259" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585504830404" />
-    <state width="2539" height="259" key="GridCell.Tab.0.left" timestamp="1585504830404">
+    <state width="2539" height="259" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585505104947" />
+    <state width="2539" height="259" key="GridCell.Tab.0.left" timestamp="1585505104947">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2539" height="259" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585504830404" />
-    <state width="2539" height="259" key="GridCell.Tab.0.right" timestamp="1585504830404">
+    <state width="2539" height="259" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585505104947" />
+    <state width="2539" height="259" key="GridCell.Tab.0.right" timestamp="1585505104947">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2539" height="259" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585504830404" />
-    <state x="872" y="434" key="Vcs.Push.Dialog.v2" timestamp="1585503248475">
+    <state width="2539" height="259" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585505104947" />
+    <state x="872" y="434" key="Vcs.Push.Dialog.v2" timestamp="1585504892175">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585503248475" />
+    <state x="872" y="434" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1440.860@0.0.2560.1400" timestamp="1585504892175" />
     <state x="3131" y="-17" width="1456" height="945" maximized="true" key="dock-window-1" timestamp="1585436933975">
       <screen x="2560" y="0" width="1440" height="860" />
     </state>
